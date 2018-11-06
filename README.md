@@ -116,13 +116,13 @@ web.1: up 2018/11/04 17:00:27 +0300 (~ 51s ago)
 ![Create app](https://i.imgur.com/zaufuoh.png)
 
 ## Пояснение к коду
-1. [main.py](https://github.com/heyyyoyy/deploy-your-bot-everywhere/heroku/master/main.py)
+1. [main.py](https://github.com/deploy-your-bot-everywhere/heroku/blob/master/main.py)
 ```python
 TOKEN = os.environ['TOKEN']  # Берем токен из переменной окружения, которую добавили ранее
 WEBHOOK_HOST = 'https://deploy-heroku-bot.herokuapp.com'  # Здесь указываем https://<название_приложения>.herokuapp.com
 WEBAPP_HOST = '0.0.0.0'  # Слушаем все подключения к нашему приложению
 WEBAPP_PORT = os.environ.get('PORT')  # тк в Procfile мы указали process_type web, heroku сгенерирует нам нужный порт, его достаточно взять из переменной окружения
 ```
-2. В [runtime.txt](https://github.com/heyyyoyy/deploy-your-bot-everywhere/heroku/blob/master/runtime.txt) указываем версию python
-3. В [Procfile](https://github.com/heyyyoyy/deploy-your-bot-everywhere/heroku/blob/master/Procfile) `<process type>: <command>`
+2. В [runtime.txt](https://github.com/deploy-your-bot-everywhere/heroku/blob/master/runtime.txt) указываем версию python
+3. В [Procfile](https://github.com/deploy-your-bot-everywhere/heroku/blob/master/Procfile) `<process type>: <command>`
 4. И не забываем указывать зависимости в файле [requirements.txt](https://github.com/deploy-your-bot-everywhere/heroku/blob/master/requirements.txt)
