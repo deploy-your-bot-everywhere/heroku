@@ -9,6 +9,7 @@
 ```
 git clone https://github.com/deploy-your-bot-everywhere/heroku.git
 ```
+> ВАЖНО!: Если вы создаете репозиторий с нуля то инициализируйте его командой `git init`
 
 ## Работа с Heroku CLI
 * Логинимся
@@ -26,6 +27,10 @@ Logged in as example@gmail.com
 Creating ⬢ deploy-heroku-bot... done, region is eu
 Setting buildpack to heroku/python... done
 https://deploy-heroku-bot.herokuapp.com/ | https://git.heroku.com/deploy-heroku-bot.git
+```
+* Связываем наш репозиторий с Heroku
+```bash
+heroku git:remote deploy-heroku-bot
 ```
 * Прописываем токен бота в переменную окружения
 ```bash
